@@ -24,7 +24,7 @@ import com.app.abby.perfectweather.contract.HomePageContract;
 import com.app.abby.perfectweather.model.api.WeatherBean;
 import com.app.abby.perfectweather.model.database.DetailORM;
 import com.app.abby.perfectweather.model.database.ForecastORM;
-import com.app.abby.perfectweather.model.database.LifeIndexOrm;
+import com.app.abby.perfectweather.model.database.LifeIndexORM;
 import com.app.abby.perfectweather.util.SharedPreferenceUtil;
 import com.app.abby.perfectweather.util.Util;
 import com.app.abby.perfectweather.view.adapter.DetailAdapter;
@@ -63,7 +63,7 @@ public class HomePageFragment extends BaseFragment implements HomePageContract.V
 
     private List<DetailORM> detailORMs;
     private List<ForecastORM> forecastORMs;
-    private List<LifeIndexOrm> lifeIndexOrms;
+    private List<LifeIndexORM> lifeIndexORMS;
 
 
     private HomePageContract.Presenter presenter;
@@ -97,8 +97,8 @@ public class HomePageFragment extends BaseFragment implements HomePageContract.V
         //生活指数
         lifeRecy.setNestedScrollingEnabled(false);
         lifeRecy.setLayoutManager(new LinearLayoutManager(WeatherApplication.getAppContext()));
-        lifeIndexOrms=new ArrayList<>();
-        lifeIndexAdapter=new LifeIndexAdapter(lifeIndexOrms);
+        lifeIndexORMS =new ArrayList<>();
+        lifeIndexAdapter=new LifeIndexAdapter(lifeIndexORMS);
         lifeRecy.setAdapter(lifeIndexAdapter);
 
         return rootView;
@@ -139,8 +139,8 @@ public class HomePageFragment extends BaseFragment implements HomePageContract.V
         forecastORMs.addAll(createForecasts(weather));
         forecastAdapter.notifyDataSetChanged();
 
-        lifeIndexOrms.clear();
-        lifeIndexOrms.addAll(createLifeIndex(weather));
+        lifeIndexORMS.clear();
+        lifeIndexORMS.addAll(createLifeIndex(weather));
         lifeIndexAdapter.notifyDataSetChanged();
 
 
@@ -217,12 +217,12 @@ public class HomePageFragment extends BaseFragment implements HomePageContract.V
         return forecasts;
     }
 
-    private List<LifeIndexOrm>createLifeIndex(WeatherBean weather){
-        List<LifeIndexOrm> lifeIndex=new ArrayList<>();
-        lifeIndex.add(new LifeIndexOrm(weather.getHeWeather5().get(0).getSuggestion().getCw().getBrf(),weather.getHeWeather5().get(0).getSuggestion().getCw().getTxt(),R.drawable.ic_car));
-        lifeIndex.add(new LifeIndexOrm(weather.getHeWeather5().get(0).getSuggestion().getSport().getBrf(),weather.getHeWeather5().get(0).getSuggestion().getSport().getTxt(),R.drawable.ic_sport));
-        lifeIndex.add(new LifeIndexOrm(weather.getHeWeather5().get(0).getSuggestion().getDrsg().getBrf(),weather.getHeWeather5().get(0).getSuggestion().getDrsg().getTxt(),R.drawable.ic_cloth));
-        lifeIndex.add(new LifeIndexOrm(weather.getHeWeather5().get(0).getSuggestion().getUv().getBrf(),weather.getHeWeather5().get(0).getSuggestion().getUv().getTxt(),R.drawable.ic_uv));
+    private List<LifeIndexORM>createLifeIndex(WeatherBean weather){
+        List<LifeIndexORM> lifeIndex=new ArrayList<>();
+        lifeIndex.add(new LifeIndexORM(weather.getHeWeather5().get(0).getSuggestion().getCw().getBrf(),weather.getHeWeather5().get(0).getSuggestion().getCw().getTxt(),R.drawable.ic_car));
+        lifeIndex.add(new LifeIndexORM(weather.getHeWeather5().get(0).getSuggestion().getSport().getBrf(),weather.getHeWeather5().get(0).getSuggestion().getSport().getTxt(),R.drawable.ic_sport));
+        lifeIndex.add(new LifeIndexORM(weather.getHeWeather5().get(0).getSuggestion().getDrsg().getBrf(),weather.getHeWeather5().get(0).getSuggestion().getDrsg().getTxt(),R.drawable.ic_cloth));
+        lifeIndex.add(new LifeIndexORM(weather.getHeWeather5().get(0).getSuggestion().getUv().getBrf(),weather.getHeWeather5().get(0).getSuggestion().getUv().getTxt(),R.drawable.ic_uv));
 
         return lifeIndex;
     }

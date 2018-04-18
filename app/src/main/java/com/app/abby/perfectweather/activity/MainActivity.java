@@ -2,6 +2,7 @@ package com.app.abby.perfectweather.activity;
 import android.Manifest;
 import android.app.Notification;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -126,17 +127,15 @@ public class MainActivity extends BaseActivity implements
 
         int id=item.getItemId();
         if(id==R.id.setting){
-
             Intent intent=new Intent(this,SettingActivity.class);
             startActivity(intent);
 
-        }else if(id==R.id.about){
-            Intent intent = new Intent(Intent.ACTION_SEND);
-            intent.setType("image/*");
-            intent.putExtra(Intent.EXTRA_SUBJECT,"share");
-            intent.putExtra(Intent.EXTRA_TEXT,"successfully");
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(Intent.createChooser(intent,getTitle()));
+        }else if(id==R.id.share){
+            Intent shareIntent = new Intent();
+            shareIntent.setAction(Intent.ACTION_SEND);
+            shareIntent.putExtra(Intent.EXTRA_STREAM,"分享");
+            shareIntent.setType("audio/*");
+            this.startActivity(Intent.createChooser(shareIntent, "分享"));
 
         }
 

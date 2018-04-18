@@ -5,7 +5,7 @@ import com.litesuits.orm.db.annotation.Table;
 import com.litesuits.orm.db.enums.AssignType;
 
 /**
- * Created by Abby on 8/29/2017.
+ * Created by tianhao on 14/4/2018.
  */
 
 @Table("drawer_item")

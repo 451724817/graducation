@@ -1,16 +1,16 @@
 package com.app.abby.perfectweather.model.database;
 
 /**
- * Created by Abby on 9/2/2017.
+ * Created by tianhao on 14/4/2018.
  */
 
-public class LifeIndexOrm  {
+public class LifeIndexORM {
 
     private String con_brif;
     private String con_txt;
     private int iconRes;
 
-    public LifeIndexOrm(String bfir,String txt,int icon){
+    public LifeIndexORM(String bfir, String txt, int icon){
         con_brif=bfir;
         con_txt=txt;
         iconRes=icon;

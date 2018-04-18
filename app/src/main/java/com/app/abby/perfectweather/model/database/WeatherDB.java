@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Abby on 8/29/2017.
+ * Created by tianhao on 13/4/2018.
  */
 
 public class WeatherDB {

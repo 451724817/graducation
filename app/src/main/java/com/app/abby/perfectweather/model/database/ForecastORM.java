@@ -1,5 +1,7 @@
 package com.app.abby.perfectweather.model.database;
-
+/**
+ * Created by tianhao on 14/4/2018.
+ */
 public class ForecastORM {
 
     private String code;

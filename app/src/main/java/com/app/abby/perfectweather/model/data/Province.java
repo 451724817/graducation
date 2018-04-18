@@ -1,7 +1,7 @@
 package com.app.abby.perfectweather.model.data;
 
 /**
- * Created by Abby on 8/29/2017.
+ * Created by tianhao on 14/4/2018.
  */
 
 public class Province  {

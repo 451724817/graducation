@@ -6,7 +6,7 @@ import com.app.abby.perfectweather.base.WeatherApplication;
 import com.litesuits.orm.LiteOrm;
 
 /**
- * Created by Abby on 8/17/2017.
+ * Created by tianhao on 13/4/2018.
  */
 
 public class OrmLite {
