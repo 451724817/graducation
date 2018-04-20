@@ -1,7 +1,4 @@
 package com.app.abby.perfectweather.model.api;
-
-import android.util.Log;
-
 import com.app.abby.perfectweather.base.Const;
 import com.app.abby.perfectweather.base.WeatherApplication;
 import com.app.abby.perfectweather.util.RxUtil;

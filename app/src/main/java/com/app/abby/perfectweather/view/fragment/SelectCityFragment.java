@@ -71,16 +71,12 @@ public class SelectCityFragment extends Fragment implements SelectCityContract.V
         mCitiList.addItemDecoration(new GroupedDecoration(rootView.getContext(),mCityBean));
         mCityAdapter=new CityListAdapter(mData);
 
-
         mCityAdapter.setOnClickListener(position -> {
-
             if(mCurrentLevel==LEVEL_PROVINCE){
-
                 mSelectedProvence=mProvinces.get(position);
                 mPresenter.loadCities(mSelectedProvence.ProSort);
                 mCitiList.smoothScrollToPosition(0);
                 mCurrentLevel=LEVEL_CITY;
-
             }else if(mCurrentLevel==LEVEL_CITY){
                 if(OrmLite.getInstance().query(new QueryBuilder<>(DrawerItemORM.class).where("mCity=?",mData.get(position))).size()==0) {
                     subscription=ApiClient.getInstance().fetchWeather(mData.get(position))
@@ -115,7 +111,6 @@ public class SelectCityFragment extends Fragment implements SelectCityContract.V
         });
 
         mCitiList.setAdapter(mCityAdapter);
-
         mPresenter.loadProvinces();
         return rootView;
 
@@ -173,7 +168,6 @@ public class SelectCityFragment extends Fragment implements SelectCityContract.V
             mProvinces.clear();
         mProvinces.addAll(provinces);
 
-
         if(mCityBean!=null){
             mCityBean.clear();
         }
@@ -185,7 +179,6 @@ public class SelectCityFragment extends Fragment implements SelectCityContract.V
         for(int i=0;i<provinces.size();i++){
             mData.add(provinces.get(i).ProName);
         }
-
         mCityAdapter.notifyDataSetChanged();
     }
 

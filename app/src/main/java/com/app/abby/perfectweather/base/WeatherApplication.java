@@ -4,8 +4,9 @@ import android.app.Application;
 import android.content.Context;
 
 
+
 /**
- * Created by Abby on 8/13/2017.
+ * Created by tianhao on 2/4/2018.
  */
 
 public class WeatherApplication extends Application {

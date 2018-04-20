@@ -10,12 +10,10 @@ import android.util.TypedValue;
 import android.view.View;
 
 import com.app.abby.perfectweather.model.data.CityBean;
-import com.app.abby.perfectweather.util.Util;
-
 import java.util.List;
 
 /**
- * Created by Abby on 8/30/2017.
+ * Created by tianhao on 16/4/2018.
  */
 
 public class GroupedDecoration extends RecyclerView.ItemDecoration{
@@ -79,8 +77,7 @@ public class GroupedDecoration extends RecyclerView.ItemDecoration{
         final int childCount = parent.getChildCount();
         for (int i = 0; i < childCount; i++) {
             final View child = parent.getChildAt(i);
-            final RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) child
-                    .getLayoutParams();
+            final RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) child.getLayoutParams();
             int position = params.getViewLayoutPosition();
             //position may be -1 when reset
             c.drawLine(left,child.getBottom()-params.bottomMargin,right,child.getBottom()-params.bottomMargin,mPaint);
@@ -93,7 +90,6 @@ public class GroupedDecoration extends RecyclerView.ItemDecoration{
 
                     } else {
                         if (null != mDatas.get(position).getTag() && !mDatas.get(position).getTag().equals(mDatas.get(position - 1).getTag())) {
-
                             drawTitleArea(c, left, right, child, params, position);
                         } else {
 
@@ -113,9 +109,6 @@ public class GroupedDecoration extends RecyclerView.ItemDecoration{
         mPaint.setColor(COLOR_TITLE_BG);
         c.drawRect(left, child.getTop() - params.topMargin - mTitleHeight, right, child.getTop() - params.topMargin, mPaint);
         mPaint.setColor(COLOR_TITLE_FONT);
-/*
-        Paint.FontMetricsInt fontMetrics = mPaint.getFontMetricsInt();
-        int baseline = (getMeasuredHeight() - fontMetrics.bottom + fontMetrics.top) / 2 - fontMetrics.top;*/
 
         mPaint.getTextBounds(mDatas.get(position).getTag(), 0, mDatas.get(position).getTag().length(), mBounds);
         c.drawText(mDatas.get(position).getTag(), child.getPaddingLeft(), child.getTop() - params.topMargin - (mTitleHeight / 2 - mBounds.height() / 2), mPaint);

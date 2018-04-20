@@ -5,7 +5,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.app.abby.perfectweather.model.data.City;
 import com.app.abby.perfectweather.model.data.Province;
-import com.app.abby.perfectweather.util.Util;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -66,9 +65,7 @@ public class WeatherDB {
 
         closeQuietly(cursor);
         return pro;
-
     }
-
 
 
     public  static void closeQuietly(Closeable closeable) {

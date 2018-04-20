@@ -23,8 +23,9 @@ import butterknife.BindView;
 import butterknife.Unbinder;
 
 
+
 /**
- * Created by Abby on 8/21/2017.
+ * Created by tianhao on 2/4/2018.
  */
 
 public class SettingFragment extends PreferenceFragment implements Preference.OnPreferenceClickListener,

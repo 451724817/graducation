@@ -1,7 +1,5 @@
 package com.app.abby.perfectweather.presenter;
 
-import android.content.Context;
-
 import com.app.abby.perfectweather.contract.SelectCityContract;
 import com.app.abby.perfectweather.model.comparator.PinyinComparator;
 import com.app.abby.perfectweather.model.data.City;
@@ -9,21 +7,13 @@ import com.app.abby.perfectweather.model.data.CityBean;
 import com.app.abby.perfectweather.model.data.Province;
 import com.app.abby.perfectweather.model.database.DBManager;
 import com.app.abby.perfectweather.model.database.WeatherDB;
-import com.app.abby.perfectweather.util.RxUtil;
 import com.github.promeg.pinyinhelper.Pinyin;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import rx.Observable;
-import rx.Subscriber;
-import rx.Subscription;
-import rx.functions.Action0;
-
 /**
- * Created by Abby on 8/29/2017.
+ * Created by tianhao on 15/4/2018.
  */
 
 public class SelectCItyPresenter implements SelectCityContract.Presenter {
@@ -44,7 +34,6 @@ public class SelectCItyPresenter implements SelectCityContract.Presenter {
         mCities=new ArrayList<>();
         cityListView=view;
         cityListView.setPresenter(this);
-
     }
 
 
@@ -80,11 +69,8 @@ public class SelectCItyPresenter implements SelectCityContract.Presenter {
 
             String s = Pinyin.toPinyin(mProvinces.get(i).ProName, "").substring(0, 1).toUpperCase();
             mCitiybeans.add(new CityBean(s, mProvinces.get(i).ProName));
-
         }
-
         cityListView.updateProvinces(mProvinces, mCitiybeans);
-
 
     }
 

@@ -18,8 +18,9 @@ import rx.Observable;
 import rx.Subscriber;
 import rx.Subscription;
 
+
 /**
- * Created by Abby on 9/2/2017.
+ * Created by tianhao on 2/4/2018.
  */
 
 public class WeatherService extends Service {

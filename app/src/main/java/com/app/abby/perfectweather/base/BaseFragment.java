@@ -3,8 +3,9 @@ package com.app.abby.perfectweather.base;
 
 import android.support.v4.app.Fragment;
 
+
 /**
- * Created by Abby on 8/13/2017.
+ * Created by tianhao on 2/4/2018.
  */
 
 public abstract class BaseFragment extends Fragment {

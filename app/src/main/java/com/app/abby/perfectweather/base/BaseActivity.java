@@ -8,10 +8,10 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-/**
- * Created by Abby on 8/13/2017.
- */
 
+/**
+ * Created by tianhao on 2/4/2018.
+ */
 public  class BaseActivity extends AppCompatActivity {
 
     @Override

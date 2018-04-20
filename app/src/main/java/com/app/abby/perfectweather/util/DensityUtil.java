@@ -5,8 +5,9 @@ import android.support.annotation.DimenRes;
 
 import com.app.abby.perfectweather.base.WeatherApplication;
 
+
 /**
- * Created by Abby on 8/14/2017.
+ * Created by tianhao on 2/4/2018.
  */
 
 public class DensityUtil {

@@ -213,7 +213,6 @@ public class MainActivity extends BaseActivity implements
                         pagePresenter.loadWeather("mianyang",true);
                     }
                 });
-
     }
 
     private void initFragment(){

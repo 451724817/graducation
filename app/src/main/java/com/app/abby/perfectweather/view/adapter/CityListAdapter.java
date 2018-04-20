@@ -18,7 +18,6 @@ public class CityListAdapter extends RecyclerView.Adapter<CityListAdapter.ViewHo
 
     public CityListAdapter(List<String>list){
         mcities=list;
-
     }
 
 
@@ -32,9 +31,6 @@ public class CityListAdapter extends RecyclerView.Adapter<CityListAdapter.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder,int pos){
         holder.mCity.setText(mcities.get(pos));
-//        holder.mItem.setOnClickListener(v -> {
-//          mOnCityClickListener.onItemClick(pos);
-//        });
         holder.mItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

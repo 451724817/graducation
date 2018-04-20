@@ -6,7 +6,7 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 /**
- * Created by tianhao on 4/14/2018.
+ * Created by tianhao on 2/4/2018.
  */
 
 public class RxUtil {

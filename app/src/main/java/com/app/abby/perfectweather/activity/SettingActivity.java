@@ -1,22 +1,20 @@
 package com.app.abby.perfectweather.activity;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-
 import com.app.abby.perfectweather.R;
 import com.app.abby.perfectweather.base.BaseActivity;
-import com.app.abby.perfectweather.util.Util;
 import com.app.abby.perfectweather.view.fragment.SettingFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
+
 /**
- * Created by Abby on 9/1/2017.
+ * Created by tianhao on 2/4/2018.
  */
 
 public class SettingActivity extends BaseActivity {

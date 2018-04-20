@@ -2,12 +2,7 @@ package com.app.abby.perfectweather.activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
-import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
-
 import com.app.abby.perfectweather.R;
 import com.app.abby.perfectweather.base.BaseActivity;
 import com.app.abby.perfectweather.contract.SelectCityContract;
