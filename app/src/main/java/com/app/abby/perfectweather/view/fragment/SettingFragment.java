@@ -1,26 +1,19 @@
 package com.app.abby.perfectweather.view.fragment;
 
 import android.app.Notification;
-import android.content.Intent;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 
 import android.preference.PreferenceFragment;
-import android.support.annotation.Nullable;
 import android.widget.Toast;
 
 import com.app.abby.perfectweather.R;
 import com.app.abby.perfectweather.base.WeatherApplication;
-import com.app.abby.perfectweather.sevices.WeatherService;
-import com.app.abby.perfectweather.util.FileSizeUtil;
 import com.app.abby.perfectweather.util.FileUtil;
 import com.app.abby.perfectweather.util.SharedPreferenceUtil;
-
 import java.io.File;
 
-import butterknife.BindView;
-import butterknife.Unbinder;
 
 
 
