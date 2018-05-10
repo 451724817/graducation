@@ -224,7 +224,6 @@ public class MainActivity extends BaseActivity implements
         pagePresenter=new HomePagePresenter(homePageFragment);
         drawerpresenter=new DrawerPresenter(drawerFragment);
 
-
     }
 }
 
