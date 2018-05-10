@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context="com.app.abby.perfectweather.view.fragment.SelectCityFragment"
+    tools:context="com.app.abby.iweather.view.fragment.SelectCityFragment"
     >
 
     <android.support.v7.widget.RecyclerView

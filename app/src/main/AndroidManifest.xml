@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 
-    package="com.app.abby.perfectweather">
+    package="com.app.abby.iweather">
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
@@ -29,7 +29,7 @@
         android:smallScreens="true"/>
 
     <application
-        android:name=".base.WeatherApplication"
+        android:name="com.app.abby.iweather.base.WeatherApplication"
         android:allowBackup="true"
         android:icon="@mipmap/weather_icon"
         android:label="@string/app_name"
@@ -47,7 +47,7 @@
         <activity
             android:screenOrientation="portrait"
             android:theme="@style/LaunchTheme"
-            android:name=".activity.WelcomeActivity">
+            android:name="com.app.abby.iweather.activity.WelcomeActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
                 <action android:name="android.intent.action.MAIN"/>
@@ -57,18 +57,18 @@
 
         <activity
             android:screenOrientation="portrait"
-            android:name=".activity.MainActivity">
+            android:name="com.app.abby.iweather.activity.MainActivity">
         </activity>
 
         <activity
             android:screenOrientation="portrait"
-            android:name=".activity.SettingActivity"/>
+            android:name="com.app.abby.iweather.activity.SettingActivity"/>
         <activity
             android:screenOrientation="portrait"
-            android:name=".activity.SelectCityActivity"/>
+            android:name="com.app.abby.iweather.activity.SelectCityActivity"/>
 
         <service
-            android:name=".sevices.WeatherService"/>
+            android:name="com.app.abby.iweather.sevices.WeatherService"/>
     </application>
 
 </manifest>

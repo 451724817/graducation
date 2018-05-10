@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.app.abby.perfectweather.view.fragment.HomePageFragment"
+    tools:context="com.app.abby.iweather.view.fragment.HomePageFragment"
     tools:ignore="RtlHardcoded">
 
     <LinearLayout
