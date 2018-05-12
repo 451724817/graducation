@@ -167,7 +167,6 @@ public class MainActivity extends BaseActivity implements
         mClient.startLocation();
     }
 
-
     @Override
     public void onDrawerItemClick(String city){
 

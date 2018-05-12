@@ -13,10 +13,6 @@ import com.app.abby.iweather.base.WeatherApplication;
 import com.app.abby.iweather.util.FileUtil;
 import com.app.abby.iweather.util.SharedPreferenceUtil;
 import java.io.File;
-
-
-
-
 /**
  * Created by tianhao on 2/4/2018.
  */

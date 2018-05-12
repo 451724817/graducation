@@ -20,7 +20,7 @@ import java.io.InputStream;
 public class DBManager {
 
     public static final String DB_NAME="china_city.db";
-    public static final String PACKAGE_NAME="com.app.abby.perfectweather";
+    public static final String PACKAGE_NAME="com.app.abby.iweather";
     public static final String DB_PATH="/data"+ Environment.getDataDirectory()
             .getAbsolutePath()+"/"+PACKAGE_NAME;
 
@@ -30,8 +30,6 @@ public class DBManager {
 
         openDatabase();
     }
-
-
 
 
     private void openDatabase()
