@@ -86,7 +86,6 @@ public class MainActivity extends BaseActivity implements
 
     }
 
-
     @Override
     public void onDestroy(){
 
@@ -135,6 +134,10 @@ public class MainActivity extends BaseActivity implements
             shareIntent.setType("audio/*");
             this.startActivity(Intent.createChooser(shareIntent, "分享"));
 
+        }else if (id==R.id.exit){
+            startActivity(new Intent(MainActivity.this,LoginActivity.class));
+            SharedPreferenceUtil.getInstance().putBoolean("hasLogin",false);
+            finish();
         }
 
         return super.onOptionsItemSelected(item);

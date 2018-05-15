@@ -17,6 +17,7 @@ import com.app.abby.iweather.base.BaseActivity;
 import com.app.abby.iweather.model.database.DrawerItemORM;
 import com.app.abby.iweather.model.database.OrmLite;
 import com.app.abby.iweather.model.database.UserORM;
+import com.app.abby.iweather.util.SharedPreferenceUtil;
 import com.litesuits.orm.db.assit.QueryBuilder;
 
 import java.util.List;
@@ -51,6 +52,10 @@ public class LoginActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         unbinder= ButterKnife.bind(this);
+        if (SharedPreferenceUtil.getInstance().getBoolean("hasLogin",false)){
+            startActivity(new Intent(LoginActivity.this,MainActivity.class));
+            finish();
+        }
     }
 
     @Override
@@ -82,7 +87,9 @@ public class LoginActivity extends BaseActivity {
                     Toast.makeText(LoginActivity.this,"账号不存在",Toast.LENGTH_SHORT).show();
                 }else {
                     if (username.equals(user.get(0).getUsername()) && password.equals(user.get(0).getPassword())) {
+                        SharedPreferenceUtil.getInstance().putBoolean("hasLogin",true);
                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        finish();
                     } else {
                         Toast.makeText(LoginActivity.this, "密码错误,请重新输入", Toast.LENGTH_SHORT).show();
                     }

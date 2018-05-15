@@ -42,9 +42,12 @@ public class RegisterActivity extends BaseActivity {
     EditText et_username;
     @BindView(R.id.et_password)
     EditText et_password;
+    @BindView(R.id.et_repeatpassword)
+    EditText et_repatPassword;
 
     private String username;
     private String password;
+    private String repatPassword;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,11 +70,17 @@ public class RegisterActivity extends BaseActivity {
             public void onClick(View view) {
                 username=et_username.getText().toString();
                 password=et_password.getText().toString();
+                repatPassword=et_repatPassword.getText().toString();
                 if (!username.equals("") && !password.equals("")){
                     if(OrmLite.getInstance().query(new QueryBuilder<>(UserORM.class).where("username=?",username)).size()==0) {
-                        OrmLite.getInstance().save(new UserORM(username,password));
-                        Toast.makeText(RegisterActivity.this,"注册成功",Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+                        if (!password.equals(repatPassword)){
+                            Toast.makeText(RegisterActivity.this,"两次输入的密码不一致",Toast.LENGTH_SHORT).show();
+                        }else {
+                            OrmLite.getInstance().save(new UserORM(username, password));
+                            Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                            finish();
+                        }
                     }else {
                         Toast.makeText(RegisterActivity.this,"账号已被注册",Toast.LENGTH_SHORT).show();
                     }
@@ -143,7 +152,6 @@ public class RegisterActivity extends BaseActivity {
                 fab.setImageResource(R.drawable.plus);
                 RegisterActivity.super.onBackPressed();
             }
-
             @Override
             public void onAnimationStart(Animator animation) {
                 super.onAnimationStart(animation);
