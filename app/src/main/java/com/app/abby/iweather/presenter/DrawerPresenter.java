@@ -5,7 +5,6 @@ import com.app.abby.iweather.model.database.DrawerItemORM;
 import com.app.abby.iweather.model.database.OrmLite;
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * Created by tianhao on 15/4/2018.
  */

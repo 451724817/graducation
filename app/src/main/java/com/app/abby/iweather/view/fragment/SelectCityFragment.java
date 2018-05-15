@@ -100,9 +100,7 @@ public class SelectCityFragment extends Fragment implements SelectCityContract.V
                                 }
                             });
                 }else {
-
                     Toast.makeText(getContext(),"您已经添加过"+mData.get(position)+"了，无需重复添加",Toast.LENGTH_SHORT).show();
-
                 }
 
 

@@ -39,7 +39,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     @Override
                     public void onNext(Long aLong) {
 
-                        Intent intent=new Intent(WelcomeActivity.this,MainActivity.class);
+                        Intent intent=new Intent(WelcomeActivity.this,LoginActivity.class);
                         startActivity(intent);
                         finish();
                         overridePendingTransition(R.anim.fade_in,R.anim.fade_out);

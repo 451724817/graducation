@@ -44,16 +44,21 @@
 
         <service android:name="com.amap.api.location.APSService"/>
 
+        <!--android:name="com.app.abby.iweather.activity.WelcomeActivity">-->
         <activity
             android:screenOrientation="portrait"
             android:theme="@style/LaunchTheme"
-            android:name="com.app.abby.iweather.activity.WelcomeActivity">
+            android:name="com.app.abby.iweather.activity.LoginActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
 
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".activity.RegisterActivity">
+        </activity>
 
         <activity
             android:screenOrientation="portrait"

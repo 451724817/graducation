@@ -24,4 +24,13 @@
     <string name="author">Haobing</string>
     <string name="email">email:451724817@qq.com</string>
     <string name="warning">检测到定位服务已经关闭，为了给您提供更好的体验，建议您在设置里打开定位服务</string>
+
+    <string name="login">LOGIN</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="forgot_your_password">Forgot your password ?</string>
+    <string name="go">GO</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="next">NEXT</string>
+    <string name="register">REGISTER</string>
 </resources>

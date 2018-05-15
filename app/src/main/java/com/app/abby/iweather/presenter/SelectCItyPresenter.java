@@ -56,6 +56,7 @@ public class SelectCItyPresenter implements SelectCityContract.Presenter {
 
     private void queryProvinces() {
 
+
         if (mCitiybeans != null)
             mCitiybeans.clear();
 
@@ -103,7 +104,6 @@ public class SelectCItyPresenter implements SelectCityContract.Presenter {
         cityListView.updateCities(mCities,mCitiybeans);
 
     }
-
 
 
 
