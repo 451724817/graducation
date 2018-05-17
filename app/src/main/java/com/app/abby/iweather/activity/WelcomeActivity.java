@@ -21,8 +21,6 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-
-
         subscription=Observable.timer(1, TimeUnit.SECONDS)
                 .subscribeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<Long>() {
@@ -35,7 +33,6 @@ public class WelcomeActivity extends AppCompatActivity {
                     public void onError(Throwable e) {
 
                     }
-
                     @Override
                     public void onNext(Long aLong) {
 

@@ -83,14 +83,11 @@ public class SelectCityFragment extends Fragment implements SelectCityContract.V
                             .subscribe(new Subscriber<WeatherBean>() {
                                 @Override
                                 public void onCompleted() {
-
                                 }
-
                                 @Override
                                 public void onError(Throwable e) {
 
                                 }
-
                                 @Override
                                 public void onNext(WeatherBean weatherBean) {
 

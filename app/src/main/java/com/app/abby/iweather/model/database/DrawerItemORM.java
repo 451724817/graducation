@@ -11,7 +11,6 @@ import com.litesuits.orm.db.enums.AssignType;
 @Table("drawer_item")
 public class DrawerItemORM {
 
-
     @PrimaryKey(AssignType.AUTO_INCREMENT)
     private int id;
 
